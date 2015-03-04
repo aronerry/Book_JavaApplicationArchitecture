@@ -4,6 +4,10 @@ import java.util.*;
 import org.xml.sax.helpers.*;
 import org.xml.sax.*;
 
+/**
+ * 解析器
+ *
+ */
 class PolicyDefaultHandler extends DefaultHandler {
 
 	private Policy policy;

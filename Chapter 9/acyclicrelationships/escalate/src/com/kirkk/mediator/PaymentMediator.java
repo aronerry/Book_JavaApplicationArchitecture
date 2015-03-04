@@ -1,10 +1,13 @@
 package com.kirkk.mediator;
 
 import java.math.*;
-import java.util.*;
 import com.kirkk.cust.*;
 import com.kirkk.bill.*;
 
+/**
+ * 集成了前一版本Bill中的pay()方法
+ *
+ */
 public class PaymentMediator {
 	private Customer customer;
 

@@ -3,8 +3,11 @@ package com.extensiblejava.builder.xml;
 import java.util.*;
 import org.xml.sax.helpers.*;
 import org.xml.sax.*;
-import com.extensiblejava.policy.*;
 
+/**
+ * 相较于前一版本，构造器参数由Policy变为PolicyXMLBuilder
+ *
+ */
 class PolicyDefaultHandler extends DefaultHandler {
 
 	private PolicyXMLBuilder policyXMLBuilder;

@@ -1,8 +1,11 @@
 package com.kirkk.calc;
 
 import java.math.*;
-import java.util.*;
 
+/**
+ * 集成了原始版本Customer中d getDiscountAmount()方法
+ *
+ */
 public class DiscountCalculator {
 	private Integer numBills;
 

@@ -3,10 +3,14 @@ package com.extensiblejava.builder.xml;
 import java.util.*;
 import java.io.*;
 import javax.xml.parsers.*;
-import org.xml.sax.helpers.*;
 import org.xml.sax.*;
 import com.extensiblejava.policy.*;
 
+/**
+ * 单独构建了一组与Policy类相同的成员变量
+ * 替代了前一版本Policy中的解析功能
+ *
+ */
 public class PolicyXMLBuilder implements PolicyBuilder {
 
 	private String xmlString;

@@ -3,6 +3,10 @@ package com.extensiblejava.bill;
 import java.math.*;
 import com.extensiblejava.route.*;
 
+/**
+ * 相较于前一版本，继承了Routable接口，新增了优先级判断方法
+ *
+ */
 public class Bill implements Routable {
 	public static final String HIGH = "01";
 	public static final String LOW = "02";

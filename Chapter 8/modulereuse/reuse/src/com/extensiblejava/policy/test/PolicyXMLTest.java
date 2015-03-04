@@ -1,11 +1,9 @@
 package com.extensiblejava.policy.test;
 
 import junit.framework.*;
-import junit.textui.*;
 import com.extensiblejava.policy.*;
 import com.extensiblejava.builder.xml.*;
 import java.util.*;
-import java.io.*;
 
 public class PolicyXMLTest extends TestCase
 {

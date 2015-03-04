@@ -5,6 +5,10 @@ import java.math.BigDecimal;
 import com.kirkk.bill.*;
 import com.kirkk.calc.*;
 
+/**
+ * 相较于原始版本，移除了getDiscountAmount()方法，并新增了getDiscountCalculator()方法
+ *
+ */
 public class Customer {
 	private List bills;
 

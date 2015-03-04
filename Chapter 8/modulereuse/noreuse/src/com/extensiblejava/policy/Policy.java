@@ -3,15 +3,14 @@ package com.extensiblejava.policy;
 import java.util.*;
 import java.io.*;
 import javax.xml.parsers.*;
-import org.xml.sax.helpers.*;
 import org.xml.sax.*;
 
 public class Policy {
 	private String firstName;
 	private String lastName;
-	private String tobaccoUser;
-	private Date dateOfBirth;
-	private String maritalStatus;
+	private String tobaccoUser; // 
+	private Date dateOfBirth; // 生日
+	private String maritalStatus; // 婚姻状态
 
 	public Policy(String xmlString) {
 		try {

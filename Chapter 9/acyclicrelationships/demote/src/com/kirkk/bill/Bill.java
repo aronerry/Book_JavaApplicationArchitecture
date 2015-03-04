@@ -3,6 +3,10 @@ package com.kirkk.bill;
 import java.math.BigDecimal;
 import com.kirkk.calc.*;
 
+/**
+ * 相较于原始版本，折扣率由Customer改为DiscoutCalculator提供
+ *
+ */
 public class Bill {
 
 	private BigDecimal chargeAmount;

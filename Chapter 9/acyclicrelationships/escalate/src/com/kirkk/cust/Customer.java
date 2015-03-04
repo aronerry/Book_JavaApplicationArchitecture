@@ -4,6 +4,10 @@ import java.util.*;
 import java.math.BigDecimal;
 import com.kirkk.bill.*;
 
+/**
+ * 相较于前一版本无变化
+ *
+ */
 public class Customer {
 	private List bills;
 

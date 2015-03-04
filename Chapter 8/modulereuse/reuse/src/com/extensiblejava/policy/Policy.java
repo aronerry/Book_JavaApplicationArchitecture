@@ -2,6 +2,10 @@ package com.extensiblejava.policy;
 
 import java.util.*;
 
+/**
+ * 相较于前一版本，不直接在构造器中解析，另单独创建了buildPolicy()
+ *
+ */
 public class Policy {
 	private String firstName;
 	private String lastName;
