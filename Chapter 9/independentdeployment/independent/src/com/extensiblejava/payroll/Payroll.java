@@ -2,6 +2,10 @@ package com.extensiblejava.payroll;
 
 import java.math.BigDecimal;
 
+/**
+ * 相较于上一版本无变化
+ *
+ */
 public class Payroll {
 
 	private BigDecimal salary;
