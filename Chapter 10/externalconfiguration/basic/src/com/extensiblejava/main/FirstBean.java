@@ -6,7 +6,7 @@ public class FirstBean {
 	private InjectedInterface injectedBean;
 
 	public FirstBean(InjectedInterface injectedBean) {
-		//ResourceBundle bundle = ResourceBundle.getBundle("com.extensiblejava.main.Resource");
+//		ResourceBundle bundle = ResourceBundle.getBundle("com.extensiblejava.main.Resource");
 		//String uid = bundle.getString("app.uid");
 		//String pwd = bundle.getString("app.pwd");
 		//injectedBean.setUid(uid);
