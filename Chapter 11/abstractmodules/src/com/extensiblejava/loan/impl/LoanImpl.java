@@ -1,0 +1,74 @@
+package com.extensiblejava.loan.impl;
+
+import java.math.*;
+import java.util.*;
+import com.extensiblejava.loan.*;
+
+/**
+ * 相较于10.4.1版本基本一致
+ *
+ */
+public class LoanImpl implements Loan {
+	private LoanCalculator loanCalculator;
+	private PaymentSchedule paymentSchedule;
+
+	public LoanImpl(LoanCalculator loanCalculator) {
+		this.loanCalculator = loanCalculator;
+	}
+
+	public PaymentSchedule calculatePaymentSchedule() {
+		if (this.paymentSchedule == null) {
+			this.paymentSchedule = loanCalculator.calculatePaymentSchedule();
+		}
+		return this.paymentSchedule;
+
+	}
+
+	/**
+	 * 获取本月的还款单
+	 */
+	public BigDecimal getMonthlyPayment() {
+		if (this.paymentSchedule == null) {
+			this.paymentSchedule = loanCalculator.calculatePaymentSchedule();
+		}
+		Iterator payments = this.paymentSchedule.getPayments();
+		BigDecimal monthlyPayment = null;
+		if (payments.hasNext()) {
+			Payment payment = (Payment) payments.next();
+			monthlyPayment = payment.getPrincipal().add(payment.getInterest());
+			monthlyPayment = monthlyPayment.setScale(2, BigDecimal.ROUND_HALF_UP);
+		}
+
+		return monthlyPayment;
+	}
+
+	/**
+	 * 获取最后一个月的还款单
+	 */
+	public BigDecimal getFinalPayment() {
+		if (this.paymentSchedule == null) {
+			this.paymentSchedule = loanCalculator.calculatePaymentSchedule();
+		}
+		Iterator payments = this.paymentSchedule.getPayments();
+		Payment payment = null;
+		while (payments.hasNext()) {
+			payment = (Payment) payments.next();
+		}
+		BigDecimal finalPayment = payment.getPrincipal().add(payment.getInterest());;
+		finalPayment = finalPayment.setScale(2, BigDecimal.ROUND_HALF_UP);
+		return finalPayment;
+
+	}
+
+	public BigDecimal getCumulativeInterest() { return this.loanCalculator.getCumulativeInterest(); }
+	public BigDecimal getCumulativePrincipal() { return this.loanCalculator.getCumulativePrincipal(); }
+	/**
+	 * 全部应付的本金与利息总额
+	 */
+	public BigDecimal getTotalPayments() {
+		BigDecimal totalPayments =  this.loanCalculator.getCumulativePrincipal().add(this.loanCalculator.getCumulativeInterest());
+		totalPayments = totalPayments.setScale(2, BigDecimal.ROUND_HALF_UP);
+		return totalPayments;
+	}
+
+}

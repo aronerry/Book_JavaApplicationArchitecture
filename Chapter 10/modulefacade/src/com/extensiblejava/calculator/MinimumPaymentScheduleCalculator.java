@@ -53,7 +53,7 @@ public class MinimumPaymentScheduleCalculator implements LoanCalculator {
 			loanBalance = loanBalance.subtract(principal);
 		}
 		
-		// 最后一次还款，利息、本金、累积利息、累积本机
+		// 最后一次还款，利息、本金、累积利息、累积本金
 		BigDecimal interest = loanBalance.multiply(adjustedRate).setScale(2, BigDecimal.ROUND_HALF_UP);
 		BigDecimal principal = loanBalance.setScale(2, BigDecimal.ROUND_HALF_UP);
 		this.cumulativeInterest = this.cumulativeInterest.add(interest).setScale(2, BigDecimal.ROUND_HALF_UP);
