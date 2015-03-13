@@ -93,9 +93,35 @@
 				<formatter type="plain"/>
 			</test>
 		</junit>
+		
+		<!-- analyzer -->
+		<taskdef name="jaranalyzer" classname="com.kirkk.analyzer.textui.JarAnalyzerTask">
+            <classpath>
+                <pathelement path="${lib}/jaranalyzer-1.2.jar"/>
+                <pathelement path="${lib}/lib/bcel-5.2.jar"/>
+                <pathelement path="${lib}/lib/jakarta-regexp-1.3.jar"/>
+                <pathelement path="${lib}/lib"/>
+            </classpath>
+        </taskdef>
+		<delete file="${bindist}/loan-test-${version}.jar"/>
+        <jaranalyzer srcdir="${bindist}" destfile="${buildstats}/dependencies.xml" 
+				summaryclass="com.kirkk.analyzer.textui.XMLUISummary" />
+				
+		<style in="${buildstats}/dependencies.xml" 
+		       out="${buildstats}/dependencies.html"
+			style="${lib}/jaranalyzer.xsl">	
+		</style>
+
+		<style in="${buildstats}/dependencies.xml" 
+		    out="${buildstats}/dependencies.grph"
+			style="${lib}/jaranalyzer2dot.xsl">	
+		</style>
+
+		<!-- <exec executable="dot" ><arg line="-Tpng -Nshape=box -Nfontsize=30 -Nwidth=1.5 -Nheight=1.25 ./buildstats/dependencies.grph -o ./buildstats/dependencies.png"/></exec> -->
+		
 	</target>
 	
-	<target name="analyzer" depends="dist">
+	<!-- <target name="analyzer" depends="dist">
 
         <taskdef name="jaranalyzer" classname="com.kirkk.analyzer.textui.JarAnalyzerTask">
             <classpath>
@@ -120,7 +146,7 @@
 		</style>
 
 		<exec executable="dot" ><arg line="-Tpng -Nshape=box -Nfontsize=30 -Nwidth=1.5 -Nheight=1.25 ./buildstats/dependencies.grph -o ./buildstats/dependencies.png"/></exec>
-
-	</target>
+		
+	</target> -->
 	
 </project>

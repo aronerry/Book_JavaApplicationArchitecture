@@ -1,0 +1,238 @@
+<?xml version="1.0"?>
+<JarAnalyzer>
+    <Jars>
+
+        <Jar name="calc-impl-1.0.jar">
+            <Summary>
+                <Statistics>
+                    <ClassCount>2</ClassCount>
+                    <AbstractClassCount>0</AbstractClassCount>
+                    <PackageCount>1</PackageCount>
+                </Statistics>
+
+                <Metrics>
+                    <Abstractness>0.00</Abstractness>
+                    <Efferent>2</Efferent>
+                    <Afferent>1</Afferent>
+                    <Instability>0.67</Instability>
+                    <Distance>0.33</Distance>
+                </Metrics>
+
+                <Packages>
+                    <Package>com.extensiblejava.calculator</Package>
+                </Packages>
+
+                <OutgoingDependencies>
+                    <Jar>loan-impl-1.0.jar</Jar>
+                    <Jar>loan-intrfc-1.0.jar</Jar>
+                </OutgoingDependencies>
+
+                <IncomingDependencies>
+                    <Jar>calc-test-1.0.jar</Jar>
+                </IncomingDependencies>
+
+                <Cycles>
+                </Cycles>
+
+                <UnresolvedDependencies>
+                </UnresolvedDependencies>
+            </Summary>
+
+        </Jar>
+
+        <Jar name="calc-test-1.0.jar">
+            <Summary>
+                <Statistics>
+                    <ClassCount>2</ClassCount>
+                    <AbstractClassCount>0</AbstractClassCount>
+                    <PackageCount>1</PackageCount>
+                </Statistics>
+
+                <Metrics>
+                    <Abstractness>0.00</Abstractness>
+                    <Efferent>3</Efferent>
+                    <Afferent>0</Afferent>
+                    <Instability>1.00</Instability>
+                    <Distance>0.00</Distance>
+                </Metrics>
+
+                <Packages>
+                    <Package>com.extensiblejava.calculator.test</Package>
+                </Packages>
+
+                <OutgoingDependencies>
+                    <Jar>calc-impl-1.0.jar</Jar>
+                    <Jar>loan-impl-1.0.jar</Jar>
+                    <Jar>loan-intrfc-1.0.jar</Jar>
+                </OutgoingDependencies>
+
+                <IncomingDependencies>
+                </IncomingDependencies>
+
+                <Cycles>
+                </Cycles>
+
+                <UnresolvedDependencies>
+                    <Package>junit.framework</Package>
+                    <Package>junit.textui</Package>
+                </UnresolvedDependencies>
+            </Summary>
+
+        </Jar>
+
+        <Jar name="client-1.0.jar">
+            <Summary>
+                <Statistics>
+                    <ClassCount>1</ClassCount>
+                    <AbstractClassCount>0</AbstractClassCount>
+                    <PackageCount>1</PackageCount>
+                </Statistics>
+
+                <Metrics>
+                    <Abstractness>0.00</Abstractness>
+                    <Efferent>2</Efferent>
+                    <Afferent>0</Afferent>
+                    <Instability>1.00</Instability>
+                    <Distance>0.00</Distance>
+                </Metrics>
+
+                <Packages>
+                    <Package>com.extensiblejava.client</Package>
+                </Packages>
+
+                <OutgoingDependencies>
+                    <Jar>loanfacade-1.0.jar</Jar>
+                    <Jar>loan-intrfc-1.0.jar</Jar>
+                </OutgoingDependencies>
+
+                <IncomingDependencies>
+                </IncomingDependencies>
+
+                <Cycles>
+                </Cycles>
+
+                <UnresolvedDependencies>
+                </UnresolvedDependencies>
+            </Summary>
+
+        </Jar>
+
+        <Jar name="loan-impl-1.0.jar">
+            <Summary>
+                <Statistics>
+                    <ClassCount>3</ClassCount>
+                    <AbstractClassCount>0</AbstractClassCount>
+                    <PackageCount>1</PackageCount>
+                </Statistics>
+
+                <Metrics>
+                    <Abstractness>0.00</Abstractness>
+                    <Efferent>1</Efferent>
+                    <Afferent>2</Afferent>
+                    <Instability>0.33</Instability>
+                    <Distance>0.67</Distance>
+                </Metrics>
+
+                <Packages>
+                    <Package>com.extensiblejava.loan.impl</Package>
+                </Packages>
+
+                <OutgoingDependencies>
+                    <Jar>loan-intrfc-1.0.jar</Jar>
+                </OutgoingDependencies>
+
+                <IncomingDependencies>
+                    <Jar>calc-impl-1.0.jar</Jar>
+                    <Jar>calc-test-1.0.jar</Jar>
+                </IncomingDependencies>
+
+                <Cycles>
+                </Cycles>
+
+                <UnresolvedDependencies>
+                </UnresolvedDependencies>
+            </Summary>
+
+        </Jar>
+
+        <Jar name="loan-intrfc-1.0.jar">
+            <Summary>
+                <Statistics>
+                    <ClassCount>5</ClassCount>
+                    <AbstractClassCount>4</AbstractClassCount>
+                    <PackageCount>1</PackageCount>
+                </Statistics>
+
+                <Metrics>
+                    <Abstractness>0.80</Abstractness>
+                    <Efferent>0</Efferent>
+                    <Afferent>5</Afferent>
+                    <Instability>0.00</Instability>
+                    <Distance>0.20</Distance>
+                </Metrics>
+
+                <Packages>
+                    <Package>com.extensiblejava.loan</Package>
+                </Packages>
+
+                <OutgoingDependencies>
+                </OutgoingDependencies>
+
+                <IncomingDependencies>
+                    <Jar>calc-impl-1.0.jar</Jar>
+                    <Jar>calc-test-1.0.jar</Jar>
+                    <Jar>client-1.0.jar</Jar>
+                    <Jar>loan-impl-1.0.jar</Jar>
+                    <Jar>loanfacade-1.0.jar</Jar>
+                </IncomingDependencies>
+
+                <Cycles>
+                </Cycles>
+
+                <UnresolvedDependencies>
+                </UnresolvedDependencies>
+            </Summary>
+
+        </Jar>
+
+        <Jar name="loanfacade-1.0.jar">
+            <Summary>
+                <Statistics>
+                    <ClassCount>1</ClassCount>
+                    <AbstractClassCount>0</AbstractClassCount>
+                    <PackageCount>1</PackageCount>
+                </Statistics>
+
+                <Metrics>
+                    <Abstractness>0.00</Abstractness>
+                    <Efferent>1</Efferent>
+                    <Afferent>1</Afferent>
+                    <Instability>0.50</Instability>
+                    <Distance>0.50</Distance>
+                </Metrics>
+
+                <Packages>
+                    <Package>com.extensiblejava.facade</Package>
+                </Packages>
+
+                <OutgoingDependencies>
+                    <Jar>loan-intrfc-1.0.jar</Jar>
+                </OutgoingDependencies>
+
+                <IncomingDependencies>
+                    <Jar>client-1.0.jar</Jar>
+                </IncomingDependencies>
+
+                <Cycles>
+                </Cycles>
+
+                <UnresolvedDependencies>
+                    <Package>org.springframework.context.support</Package>
+                    <Package>org.springframework.context</Package>
+                </UnresolvedDependencies>
+            </Summary>
+
+        </Jar>
+
+    </Jars>
+</JarAnalyzer>

@@ -1,0 +1,58 @@
+
+digraph g {
+        graph [
+	    rankdir = "LR"
+	];
+	node [
+	    fontsize = "12"
+	    fontname = "Courier"
+	    shape = "ellipse"
+	];
+	edge[];
+	"calc-impl-1.0.jar" [
+        label="calc-impl-1.0.jar | Total Packages: 1"
+	shape="record"
+	color=".99 0.33 .9"
+	style=filled
+    ];
+    "calc-impl-1.0.jar" -> "loan-impl-1.0.jar"
+    "calc-impl-1.0.jar" -> "loan-intrfc-1.0.jar"
+    "calc-test-1.0.jar" [
+        label="calc-test-1.0.jar | Total Packages: 1"
+	shape="record"
+	color=".99 0.00 .9"
+	style=filled
+    ];
+    "calc-test-1.0.jar" -> "calc-impl-1.0.jar"
+    "calc-test-1.0.jar" -> "loan-impl-1.0.jar"
+    "calc-test-1.0.jar" -> "loan-intrfc-1.0.jar"
+    "client-1.0.jar" [
+        label="client-1.0.jar | Total Packages: 1"
+	shape="record"
+	color=".99 0.00 .9"
+	style=filled
+    ];
+    "client-1.0.jar" -> "loanfacade-1.0.jar"
+    "client-1.0.jar" -> "loan-intrfc-1.0.jar"
+    "loan-impl-1.0.jar" [
+        label="loan-impl-1.0.jar | Total Packages: 1"
+	shape="record"
+	color=".99 0.67 .9"
+	style=filled
+    ];
+    "loan-impl-1.0.jar" -> "loan-intrfc-1.0.jar"
+    "loan-intrfc-1.0.jar" [
+        label="loan-intrfc-1.0.jar | Total Packages: 1"
+	shape="record"
+	color=".99 0.20 .9"
+	style=filled
+    ];
+    "loanfacade-1.0.jar" [
+        label="loanfacade-1.0.jar | Total Packages: 1"
+	shape="record"
+	color=".99 0.50 .9"
+	style=filled
+    ];
+    "loanfacade-1.0.jar" -> "loan-intrfc-1.0.jar"
+    
+}

@@ -1,0 +1,11 @@
+Testsuite: com.extensiblejava.calculator.test.AllTests
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.026 sec
+
+Testcase: testVerifyFinalInterestPayment took 0.011 sec
+Testcase: testVerifyFinalPrincipalPayment took 0.004 sec
+Testcase: testCumulativeInterest took 0.002 sec
+Testcase: testFirstPrincipalPayment took 0 sec
+Testcase: testFirstInterestPayment took 0.002 sec
+Testcase: testNumberOfPayments took 0.001 sec
+Testcase: testMonthlyPayment took 0 sec
+Testcase: testFinalPayment took 0.001 sec

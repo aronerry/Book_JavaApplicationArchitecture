@@ -1,0 +1,25 @@
+Testsuite: com.extensiblejava.calculator.test.AllTests
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.257 sec
+------------- Standard Output ---------------
+---** IN JAVA CALCULATOR **---
+---** IN JAVA CALCULATOR **---
+---** IN JAVA CALCULATOR **---
+---** IN JAVA CALCULATOR **---
+---** IN JAVA CALCULATOR **---
+---** IN JAVA CALCULATOR **---
+---** IN JAVA CALCULATOR **---
+---** IN JAVA CALCULATOR **---
+------------- ---------------- ---------------
+------------- Standard Error -----------------
+log4j:WARN No appenders could be found for logger (org.springframework.context.support.ClassPathXmlApplicationContext).
+log4j:WARN Please initialize the log4j system properly.
+------------- ---------------- ---------------
+
+Testcase: testFinalPayment took 0.196 sec
+Testcase: testVerifyFinalInterestPayment took 0.011 sec
+Testcase: testVerifyFinalPrincipalPayment took 0.007 sec
+Testcase: testCumulativeInterest took 0.005 sec
+Testcase: testFirstPrincipalPayment took 0.015 sec
+Testcase: testFirstInterestPayment took 0.006 sec
+Testcase: testNumberOfPayments took 0.005 sec
+Testcase: testMonthlyPayment took 0.007 sec

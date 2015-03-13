@@ -1,6 +1,9 @@
 package com.extensiblejava.calculator.test;
 
+import java.io.File;
 import java.math.BigDecimal;
+import java.util.Iterator;
+import java.util.List;
 
 import junit.framework.TestCase;
 

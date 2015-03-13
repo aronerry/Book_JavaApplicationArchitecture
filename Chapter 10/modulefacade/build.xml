@@ -1,7 +1,7 @@
 <project name="Comp" default="dist" basedir=".">
 
-	<property name="javasrc" location="${basedir}/src/impl"/>
-	<property name="testsrc" location="${basedir}/src/factorytests"/>
+	<property name="javasrc" location="${basedir}/src"/>
+	<!-- <property name="testsrc" location="${basedir}/src/factorytests"/> -->
 	<property name="build" location="${basedir}/build"/>
 	<property name="bindist" location="${basedir}/bin"/>
 	<property name="deploy" location="${basedir}/deploy"/>
@@ -11,7 +11,7 @@
 	
 	<path id="project.class.path">
 		<pathelement path="${javasrc}"/>
-		<pathelement path="${testsrc}"/>
+		<!-- <pathelement path="${testsrc}"/> -->
 		<pathelement path="${lib}/junit.jar"/>
 		<pathelement path="${lib}/org.springframework.beans-3.0.0.RELEASE.jar"/>
 		<pathelement path="${lib}/org.springframework.context-3.0.0.RELEASE.jar"/> 
@@ -37,7 +37,7 @@
 	</target>
 	
 	<target name="compile" depends="init">
-		<javac srcdir="${javasrc}:${testsrc}" destdir="${build}">
+		<javac srcdir="${javasrc}" destdir="${build}"><!-- :${testsrc} -->
 			<classpath refid="project.class.path"/>
 		</javac>
 	</target>
@@ -81,6 +81,30 @@
 				<formatter type="plain"/>
 			</test>
 		</junit>
+		
+		<!-- analyzer -->
+		<taskdef name="jaranalyzer" classname="com.kirkk.analyzer.textui.JarAnalyzerTask">
+            <classpath>
+                <pathelement path="${lib}/jaranalyzer-1.2.jar"/>
+                <pathelement path="${lib}/lib/bcel-5.2.jar"/>
+                <pathelement path="${lib}/lib/jakarta-regexp-1.3.jar"/>
+                <pathelement path="${lib}/lib"/>
+            </classpath>
+        </taskdef>
+		<delete file="${bindist}/loan-test-${version}.jar"/>
+        <jaranalyzer srcdir="${bindist}" destfile="${buildstats}/dependencies.xml" 
+				summaryclass="com.kirkk.analyzer.textui.XMLUISummary" />
+				
+		<style in="${buildstats}/dependencies.xml" 
+		       out="${buildstats}/dependencies.html"
+			style="${lib}/jaranalyzer.xsl">	
+		</style>
+
+		<style in="${buildstats}/dependencies.xml" 
+		    out="${buildstats}/dependencies.grph"
+			style="${lib}/jaranalyzer2dot.xsl">	
+		</style>
+		
 	</target>
 	
 	<target name="analyzer" depends="dist">

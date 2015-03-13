@@ -1,1 +1,4 @@
-Same as ManageRelationships/eliminated except the build is leveled.
+《Java应用架构设计》源代码示例
+
+[Chapter 12][Section 2][Code 2] - 等级化构建 - 等级化版本
+ - 

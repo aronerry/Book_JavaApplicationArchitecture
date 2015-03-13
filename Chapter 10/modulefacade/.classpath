@@ -10,7 +10,6 @@
 	<classpathentry kind="lib" path="lib/commons-collections.jar"/>
 	<classpathentry kind="lib" path="lib/commons-logging.jar"/>
 	<classpathentry kind="lib" path="lib/jaranalyzer-1.2.jar"/>
-	<classpathentry kind="lib" path="lib/junit.jar"/>
 	<classpathentry kind="lib" path="lib/log4j-1.2.13.jar"/>
 	<classpathentry kind="lib" path="lib/org.springframework.aop-3.0.0.RELEASE.jar"/>
 	<classpathentry kind="lib" path="lib/org.springframework.asm-3.0.0.RELEASE.jar"/>
